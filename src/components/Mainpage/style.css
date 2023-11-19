@@ -1,3 +1,244 @@
 .frame_mainPage {
-    padding-left: 250px;    
+  padding-left: 250px;
+  
+}
+
+.mainHeading {
+  size: 32px;
+  font-weight:500 ;
+  color: #050505;
+  line-height: 40.64px;
+  
+}
+
+.monitoringPanelDetailsContainer{
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.statusBar {
+  height: 10%;
+  border-bottom: 2px solid #E4E4E4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top */
+  position: relative; /* Added position relative */
+}
+
+
+.status{
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  align-items: center;
+  font-weight: 500;
+  color: #4643ee;
+  font-size: 0.9rem;
+  
+}
+.status .pending, .status .completed{
+  height: 100%;
+  display: flex;
+  padding: 0 0.8rem;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.status .pending:hover, .status .completed:hover{
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.closeAccount{
+  background:rgb(246,216,216);
+  padding: 0.5rem;
+  border-radius: 8px;
+  color:rgb(209,59,59);
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap:0.2rem;
+}
+.closeAccount:hover{
+  cursor: pointer;
+}
+.searchAndFilter{
+  height: 10%;
+  display: flex;
+  gap:1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.searchAndFilter .inputDiv {
+  border: 1px solid #ADADAD;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+.searchAndFilter .inputDiv input{
+  border:none;
+  padding: 0.3rem;
+  width: 25vw;
+  outline: none;
+}
+.searchAndFilter .inputDiv input::placeholder{
+  font-size: 0.9rem;
+}
+.searchAndFilter .filterDiv select{
+/* appearance: none; */
+width: 15vw;
+font-size: 0.9rem;
+padding: 0.6rem;
+background-color:rgb(245, 245, 245) ;
+border: 1px solid #caced1;
+border-radius: 0.25rem;
+color: #777676;
+cursor: pointer;
+outline: none;
+}
+
+.primaryDetails{
+  height: 75%;
+  border: 1px solid #caced1;
+ margin-top: 1rem;
+ border-radius: 5px;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.859);
+  z-index: 98; 
+  
+}
+
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 99; 
+}
+
+.popupHeading{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.popupHeading .closeButton:hover{
+  cursor: pointer;
+}
+.email{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.email label{
+  font-size: 0.7rem;
+  font-weight: 500;
+  color:grey;
+  margin-bottom: 0.2rem;
+}
+.email input{
+  border:1px solid #caced1;
+  border-radius: 5px;
+  outline:none;
+  padding:0.5rem;
+}
+.radioButtons{
+  display: flex;
+  margin: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  gap:2rem;
+}
+.radioButtons .radioButtonsBtn{
+  display: flex;
+}
+.radioButtons .radioButtonsBtn input:hover{
+  cursor: pointer;
+}
+.selectBoxReason{
+  display: flex;
+  flex-direction: column;
+  gap:0.2rem;
+  margin: 1rem;
+ 
+}
+.selectBoxReason label{
+  font-size: 0.7rem;
+  font-weight: 500;
+  color:grey;
+}
+
+.selectBoxReason select{
+  padding: 0.5rem;
+  border:1px solid #caced1;
+  border-radius: 5px;
+  outline:none;
+  font-size: 0.8rem;
+}
+.selectBoxReason select:hover{
+  cursor: pointer;
+}
+.reasonTextBox{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap:0.2rem;
+}
+.reasonTextBox label{
+  font-size: 0.7rem;
+  font-weight: 500;
+  color:grey;
+}
+.reasonTextBox textarea{
+  height: 8vh;
+  border:1px solid #caced1;
+  border-radius: 5px;
+  padding: 0.3rem;
+  outline:none;
+  resize: none;
+  font-size: 0.8rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.submitRow{
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+}
+.submitRow .submitRowRadioBtn{
+
+  display: flex;
+  align-items: center;
+}
+.submitRow .submitRowRadioBtn input:hover{
+  cursor: pointer;
+}
+.submitRowRadioBtn label{
+  color:grey;
+  font-size: 0.8rem;
+}
+.submitRow .submitButton button{
+  background: rgb(70,67,238);
+  padding: 0.7rem;
+  width: 10vw;
+  color:white;
+  border-radius: 5px;
+  outline:none;
+  border:none;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+.submitRow .submitButton button:hover{
+  cursor: pointer;
 }
