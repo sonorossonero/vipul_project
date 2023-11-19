@@ -1,0 +1,28 @@
+.rightPanelPrimaryDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.heading{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0.7rem 1.5rem;
+    background-color: #e9e9e9;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-bottom: 1px solid #caced1;
+    height: 5%;
+}
+.content{
+    overflow-y: scroll;
+    height:95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content::-webkit-scrollbar{
+    display: none;
+}
+.greyed{
+    color:grey;
+}
