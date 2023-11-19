@@ -1,3 +1,93 @@
-.frame_sideNavigation{
+.customFrame_sideNavigation {
+    padding: 1rem 0.5rem 1rem 1rem;
     width: 14.4rem;
+}
+
+.customPanel {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 1rem 0.5rem 1rem 1rem;
+    border-right: 2px solid rgba(128, 128, 128, 0.13);
+    width: 12rem;
+    height: 94.6dvh;
+}
+
+.customNavPages {
+    width: 100%;
+    height: 22.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.customNavPages .customLogo {
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin: 0;
+    color: rgba(128, 128, 128, 0.315);
+    border-top: 2px solid rgba(128, 128, 128, 0.315);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.315);
+    padding: 0.4rem 0.6rem;
+}
+
+.customNavPages ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    color: grey;
+}
+
+.customNavPages ul li {
+    width: 100%;
+    padding: 0.5rem 0.85rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #777676;
+    font-size: 16px;
+}
+
+.customNavPages ul li:hover {
+    border-radius: 0.2rem;
+    background-color: rgba(214, 214, 214, 0.315);
+}
+
+.customNavPages ul .customActive {
+    border-radius: 0.2rem;
+    background-color: #4643EE1A;
+    color: #4643EE;
+}
+
+.customUserInfo {
+    display: flex;
+    align-items: center;
+    line-height: 0.1;
+    gap: 1;
+}
+
+.customUserInfoContainer h3 {
+    margin: 1.5;
+    font-size: 14px;
+    color: #050505;
+}
+
+.customUserInfoContainer p {
+    margin: 1;
+    color: #777676;
+    font-size: 14px;
+}
+
+.customUserInfo img {
+    vertical-align: middle;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin: 25px 5px;
 }
