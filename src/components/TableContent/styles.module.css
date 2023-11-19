@@ -7,14 +7,14 @@
     border-bottom: 1px solid #caced1;
     align-items: center;
 }
-.userProfile{
+.userDetails{
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
     margin-right: 2.5rem;
     align-items: center;
 }
-.userProfile .email{
+.userDetails .email{
     font-size: 0.7rem;
     color: grey;
     font-weight: 500 ;

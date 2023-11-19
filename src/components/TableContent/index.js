@@ -1,4 +1,4 @@
-import './style.css';
+import styles from "./styles.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -14,17 +14,15 @@ export default function TableContent(props) {
   };
 
   return (
-    <div className='tableContent'>
-        {/* user->name & email */}
-      <div className='userProfile'>
+    <div className={styles.tableContent}>
+      <div className={styles.userDetails}>
         <div>
           {" "}
-          <div className='name'>{items.name}</div>
-          <div className='email'>{items.email}</div>
+          <div className={styles.name}>{items.name}</div>
+          <div className={styles.email}>{items.email}</div>
         </div>
 
-        {/* direct mail link with subject and body pre-defined */}
-        <div className='profileVisitIcon'>
+        <div className={styles.profileVisitIcon}>
           <Link onClick={handleEmailClick}>
             {" "}
             <FontAwesomeIcon
@@ -35,10 +33,9 @@ export default function TableContent(props) {
         </div>
 
       </div>
-
-      {/* risk level  */}
+      {/* risk level */}
       <div
-        className='riskLevel'
+        className={styles.riskLevel}
         style={{
           color:
             items.riskLevel === "Medium"
@@ -49,7 +46,7 @@ export default function TableContent(props) {
         }}
       >
         <div
-          className='circle'
+          className={styles.circle}
           style={{
             background:
               items.riskLevel === "Medium"
@@ -64,31 +61,27 @@ export default function TableContent(props) {
         ></div>
         <div>{items.riskLevel}</div>
       </div>
-      
+
       {/* trigger reason */}
       <div>{items.completed ? items.actionReason : items.triggerReason}</div>
-
       {/* queue dates */}
       <div>{items.completed ? items.timeToClose : items.inQueueFor}</div>
-      
       {/* data added */}
       <div>{items.dateAddedOn}</div>
 
-
-      {/* previously reviewed */}
+          {/* previously reviewed */}
       <div>
-        {items.previouslyReviewed?.flag && (
-          <div style={{ fontSize: "0.9rem" }}>Yes</div>
-        )}
+        {items.previouslyReviewed?.flag ?  (<div style={{ fontSize: "0.9rem" }}>Yes</div>) : (<div style={{ fontSize: "0.9rem" }}>No</div>)
+        }
         <div
           style={{
             fontSize: items.previouslyReviewed ? "0.7rem" : "0.9rem",
             color: items.previouslyReviewed ? "grey" : "black",
           }}
         >
-          {items.completed
-            ? items.actionTakenBy.name
-            : items.previouslyReviewed.date}
+          {items.previouslyReviewed?.flag ?
+            items.previouslyReviewed.date
+            : ""}
         </div>
         {items.actionTakenBy && (
           <div style={{ fontSize: "0.7rem", color: "grey" }}>
@@ -96,7 +89,6 @@ export default function TableContent(props) {
           </div>
         )}
       </div>
-
     </div>
   );
 }

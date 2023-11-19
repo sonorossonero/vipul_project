@@ -8,7 +8,7 @@ function SideNavigation() {
             <div className='customFrame_sideNavigation'></div>
             <div className='customPanel'>
                 <div className='customNavPages'>
-                    <h1 className='customLogo'>BRAND NAME</h1>
+                    <h1 className='customLogo'>LOGO HERE</h1>
                     <ul>
                         <li>Overview</li>
                         <li>Onboarding</li>
