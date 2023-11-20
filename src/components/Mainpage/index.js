@@ -64,6 +64,17 @@ function Mainpage() {
                         </div>
                     </div>
 
+                    <div style={{
+                        content: "",
+                        position: "absolute",
+                        top: "33px",
+                        // left: "0",
+                        width: "85px",
+                        height: "2px",
+                        backgroundColor: "#0000FF", left:status==="pending" ? "0" : "108px"
+                    }} />
+
+
                     <div className='closeAccount' onClick={handleCloseAccount}>
                         <div>
                             <FontAwesomeIcon icon={faCircleXmark} />
